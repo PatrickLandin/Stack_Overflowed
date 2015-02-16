@@ -14,7 +14,7 @@
 @property (strong, nonatomic) UIViewController *topViewController;
 @property (strong, nonatomic) UIButton *burgerButton;
 @property (strong, nonatomic) UITapGestureRecognizer *tapToClose;
-
+@property (strong, nonatomic) UIPanGestureRecognizer *slideRecognizer;
 
 @end
 
@@ -36,7 +36,8 @@
   self.burgerButton = burgerButton;
 
   self.tapToClose = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closePanel)];
-
+  self.slideRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(slidePanel:)];
+  [self.topViewController.view addGestureRecognizer:self.slideRecognizer];
     // Do any additional setup after loading the view.
 }
 
@@ -45,6 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Burger Button
 -(void)burgerButtonPressed {
   NSLog(@"burger");
   
@@ -58,6 +60,7 @@
   }];
 }
 
+#pragma mark - Panel Stuff
 -(void)closePanel {
   NSLog(@"panel closing...");
   
@@ -69,6 +72,39 @@
   } completion:^(BOOL finished) {
     weakSelf.burgerButton.userInteractionEnabled = true;
   }];
+}
+
+-(void)slidePanel:(id)sender {
+  UIPanGestureRecognizer *pan = (UIPanGestureRecognizer *)sender;
+  
+  CGPoint translatedPoint = [pan translationInView:self.view];
+  CGPoint velocity = [pan velocityInView:self.view];
+  
+  if ([pan state] == UIGestureRecognizerStateChanged) {
+    if (velocity.x > 0 || self.topViewController.view.frame.origin.x > 0) {
+      self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translatedPoint.x, self.topViewController.view.center.y);
+      [pan setTranslation:CGPointZero inView:self.view];
+    }
+  }
+  
+  if ([pan state] == UIGestureRecognizerStateEnded) {
+    __weak BurgerContainerViewController *weakSelf = self;
+    
+    if (self.topViewController.view.frame.origin.x > self.view.frame.size.width / 3) {
+      NSLog(@"Open time");
+      self.burgerButton.userInteractionEnabled = false;
+      [UIView animateWithDuration:0.33 animations:^{
+        self.topViewController.view.center = CGPointMake(weakSelf.view.frame.size.width * 1.25, weakSelf.topViewController.view.center.y);
+      } completion:^(BOOL finished) {
+        [weakSelf.topViewController.view addGestureRecognizer:weakSelf.tapToClose];
+      }];
+    } else {
+      [UIView animateWithDuration:0.22 animations:^{
+        weakSelf.topViewController.view.center = weakSelf.view.center;
+      }];
+      [self.topViewController.view removeGestureRecognizer:self.tapToClose];
+    }
+  }
 }
 
 #pragma mark - Property Getters
