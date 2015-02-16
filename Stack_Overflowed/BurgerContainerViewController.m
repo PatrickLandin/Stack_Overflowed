@@ -35,6 +35,7 @@
   [self.searchVC.view addSubview:burgerButton];
   self.burgerButton = burgerButton;
 
+  self.tapToClose = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closePanel)];
 
     // Do any additional setup after loading the view.
 }
@@ -46,6 +47,7 @@
 
 -(void)burgerButtonPressed {
   NSLog(@"burger");
+  
   self.burgerButton.userInteractionEnabled = false;
   __weak BurgerContainerViewController *weakSelf = self;
   
@@ -53,6 +55,19 @@
     weakSelf.topViewController.view.center = CGPointMake(weakSelf.topViewController.view.center.x +250, weakSelf.topViewController.view.center.y);
   } completion:^(BOOL finished) {
     [weakSelf.topViewController.view addGestureRecognizer:weakSelf.tapToClose];
+  }];
+}
+
+-(void)closePanel {
+  NSLog(@"panel closing...");
+  
+  [self.topViewController.view removeGestureRecognizer:self.tapToClose];
+  __weak BurgerContainerViewController *weakSelf = self;
+  
+  [UIView animateWithDuration:0.33 animations:^{
+    weakSelf.topViewController.view.center = weakSelf.view.center;
+  } completion:^(BOOL finished) {
+    weakSelf.burgerButton.userInteractionEnabled = true;
   }];
 }
 
