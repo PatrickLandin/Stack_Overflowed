@@ -17,6 +17,7 @@
 		EC94055C1A928CB600A20C55 /* Stack_OverflowedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC94055B1A928CB600A20C55 /* Stack_OverflowedTests.m */; };
 		EC9405671A9294FA00A20C55 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405661A9294FA00A20C55 /* MenuTableViewController.m */; };
 		EC94056A1A92951600A20C55 /* BurgerContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405691A92951600A20C55 /* BurgerContainerViewController.m */; };
+		EC9405701A92ABA000A20C55 /* WebOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC94056F1A92ABA000A20C55 /* WebOAuthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		EC9405661A9294FA00A20C55 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		EC9405681A92951600A20C55 /* BurgerContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerContainerViewController.h; sourceTree = "<group>"; };
 		EC9405691A92951600A20C55 /* BurgerContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerContainerViewController.m; sourceTree = "<group>"; };
+		EC94056E1A92ABA000A20C55 /* WebOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebOAuthViewController.h; path = ../WebOAuthViewController.h; sourceTree = "<group>"; };
+		EC94056F1A92ABA000A20C55 /* WebOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebOAuthViewController.m; path = ../WebOAuthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +97,12 @@
 				EC9405461A928CB600A20C55 /* ViewController.h */,
 				EC9405471A928CB600A20C55 /* ViewController.m */,
 				EC9405491A928CB600A20C55 /* Main.storyboard */,
-				EC9405651A9294FA00A20C55 /* MenuTableViewController.h */,
-				EC9405661A9294FA00A20C55 /* MenuTableViewController.m */,
 				EC9405681A92951600A20C55 /* BurgerContainerViewController.h */,
 				EC9405691A92951600A20C55 /* BurgerContainerViewController.m */,
+				EC9405651A9294FA00A20C55 /* MenuTableViewController.h */,
+				EC9405661A9294FA00A20C55 /* MenuTableViewController.m */,
+				EC94056E1A92ABA000A20C55 /* WebOAuthViewController.h */,
+				EC94056F1A92ABA000A20C55 /* WebOAuthViewController.m */,
 				EC94054C1A928CB600A20C55 /* Images.xcassets */,
 				EC94054E1A928CB600A20C55 /* LaunchScreen.xib */,
 				EC9405431A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld */,
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9405701A92ABA000A20C55 /* WebOAuthViewController.m in Sources */,
 				EC9405451A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld in Sources */,
 				EC94056A1A92951600A20C55 /* BurgerContainerViewController.m in Sources */,
 				EC9405421A928CB600A20C55 /* AppDelegate.m in Sources */,

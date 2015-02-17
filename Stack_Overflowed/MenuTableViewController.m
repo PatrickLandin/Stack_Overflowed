@@ -7,6 +7,7 @@
 //
 
 #import "MenuTableViewController.h"
+#import "WebOAuthViewController.h"
 
 @interface MenuTableViewController ()
 
@@ -24,9 +25,18 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  NSString *token = [userDefaults stringForKey:@"token"];
+  if (!token) {
+    // if no token, show web view
+    WebOAuthViewController *webOAuthViewController = [[WebOAuthViewController alloc] init];
+    [self presentViewController:webOAuthViewController animated:true completion:^{
+      // ?
+    }];
+  }
 }
 
 //#pragma mark - Table view data source
