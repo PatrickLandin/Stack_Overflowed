@@ -18,6 +18,10 @@
 		EC9405671A9294FA00A20C55 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405661A9294FA00A20C55 /* MenuTableViewController.m */; };
 		EC94056A1A92951600A20C55 /* BurgerContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405691A92951600A20C55 /* BurgerContainerViewController.m */; };
 		EC9405701A92ABA000A20C55 /* WebOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC94056F1A92ABA000A20C55 /* WebOAuthViewController.m */; };
+		EC9405731A93E16E00A20C55 /* StackOverflowService.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405721A93E16E00A20C55 /* StackOverflowService.m */; };
+		EC9405761A93E28800A20C55 /* SearchQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405751A93E28800A20C55 /* SearchQuestionsViewController.m */; };
+		EC9405791A9400E100A20C55 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405781A9400E100A20C55 /* Question.m */; };
+		EC94057C1A940AA000A20C55 /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC94057B1A940AA000A20C55 /* QuestionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		EC9405691A92951600A20C55 /* BurgerContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerContainerViewController.m; sourceTree = "<group>"; };
 		EC94056E1A92ABA000A20C55 /* WebOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebOAuthViewController.h; path = ../WebOAuthViewController.h; sourceTree = "<group>"; };
 		EC94056F1A92ABA000A20C55 /* WebOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebOAuthViewController.m; path = ../WebOAuthViewController.m; sourceTree = "<group>"; };
+		EC9405711A93E16E00A20C55 /* StackOverflowService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowService.h; sourceTree = "<group>"; };
+		EC9405721A93E16E00A20C55 /* StackOverflowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowService.m; sourceTree = "<group>"; };
+		EC9405741A93E28800A20C55 /* SearchQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchQuestionsViewController.h; sourceTree = "<group>"; };
+		EC9405751A93E28800A20C55 /* SearchQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQuestionsViewController.m; sourceTree = "<group>"; };
+		EC9405771A9400E100A20C55 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		EC9405781A9400E100A20C55 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		EC94057A1A940AA000A20C55 /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
+		EC94057B1A940AA000A20C55 /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,14 @@
 				EC9405461A928CB600A20C55 /* ViewController.h */,
 				EC9405471A928CB600A20C55 /* ViewController.m */,
 				EC9405491A928CB600A20C55 /* Main.storyboard */,
+				EC94057A1A940AA000A20C55 /* QuestionCell.h */,
+				EC94057B1A940AA000A20C55 /* QuestionCell.m */,
+				EC9405771A9400E100A20C55 /* Question.h */,
+				EC9405781A9400E100A20C55 /* Question.m */,
+				EC9405711A93E16E00A20C55 /* StackOverflowService.h */,
+				EC9405721A93E16E00A20C55 /* StackOverflowService.m */,
+				EC9405741A93E28800A20C55 /* SearchQuestionsViewController.h */,
+				EC9405751A93E28800A20C55 /* SearchQuestionsViewController.m */,
 				EC9405681A92951600A20C55 /* BurgerContainerViewController.h */,
 				EC9405691A92951600A20C55 /* BurgerContainerViewController.m */,
 				EC9405651A9294FA00A20C55 /* MenuTableViewController.h */,
@@ -241,8 +261,12 @@
 				EC9405451A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld in Sources */,
 				EC94056A1A92951600A20C55 /* BurgerContainerViewController.m in Sources */,
 				EC9405421A928CB600A20C55 /* AppDelegate.m in Sources */,
+				EC9405731A93E16E00A20C55 /* StackOverflowService.m in Sources */,
 				EC9405481A928CB600A20C55 /* ViewController.m in Sources */,
+				EC94057C1A940AA000A20C55 /* QuestionCell.m in Sources */,
 				EC94053F1A928CB600A20C55 /* main.m in Sources */,
+				EC9405791A9400E100A20C55 /* Question.m in Sources */,
+				EC9405761A93E28800A20C55 /* SearchQuestionsViewController.m in Sources */,
 				EC9405671A9294FA00A20C55 /* MenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +460,7 @@
 				EC9405611A928CB600A20C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC9405621A928CB600A20C55 /* Build configuration list for PBXNativeTarget "Stack_OverflowedTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +469,7 @@
 				EC9405641A928CB600A20C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
