@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC92C1901A953FEE00B5E611 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92C18F1A953FEE00B5E611 /* ProfileViewController.m */; };
 		EC94053F1A928CB600A20C55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC94053E1A928CB600A20C55 /* main.m */; };
 		EC9405421A928CB600A20C55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405411A928CB600A20C55 /* AppDelegate.m */; };
 		EC9405451A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC9405431A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC92C18D1A953A6C00B5E611 /* MenuPressedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPressedDelegate.h; sourceTree = "<group>"; };
+		EC92C18E1A953FEE00B5E611 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		EC92C18F1A953FEE00B5E611 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		EC9405391A928CB600A20C55 /* Stack_Overflowed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stack_Overflowed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC94053D1A928CB600A20C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC94053E1A928CB600A20C55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,12 +117,15 @@
 				EC94057B1A940AA000A20C55 /* QuestionCell.m */,
 				EC9405771A9400E100A20C55 /* Question.h */,
 				EC9405781A9400E100A20C55 /* Question.m */,
+				EC92C18D1A953A6C00B5E611 /* MenuPressedDelegate.h */,
 				EC9405711A93E16E00A20C55 /* StackOverflowService.h */,
 				EC9405721A93E16E00A20C55 /* StackOverflowService.m */,
 				EC9405741A93E28800A20C55 /* SearchQuestionsViewController.h */,
 				EC9405751A93E28800A20C55 /* SearchQuestionsViewController.m */,
 				EC9405681A92951600A20C55 /* BurgerContainerViewController.h */,
 				EC9405691A92951600A20C55 /* BurgerContainerViewController.m */,
+				EC92C18E1A953FEE00B5E611 /* ProfileViewController.h */,
+				EC92C18F1A953FEE00B5E611 /* ProfileViewController.m */,
 				EC9405651A9294FA00A20C55 /* MenuTableViewController.h */,
 				EC9405661A9294FA00A20C55 /* MenuTableViewController.m */,
 				EC94056E1A92ABA000A20C55 /* WebOAuthViewController.h */,
@@ -267,6 +274,7 @@
 				EC94053F1A928CB600A20C55 /* main.m in Sources */,
 				EC9405791A9400E100A20C55 /* Question.m in Sources */,
 				EC9405761A93E28800A20C55 /* SearchQuestionsViewController.m in Sources */,
+				EC92C1901A953FEE00B5E611 /* ProfileViewController.m in Sources */,
 				EC9405671A9294FA00A20C55 /* MenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

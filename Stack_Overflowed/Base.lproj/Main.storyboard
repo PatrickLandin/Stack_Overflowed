@@ -20,7 +20,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAh-IO-fKe">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <segue destination="0r9-vf-p3i" kind="embed" id="d83-oa-gZG"/>
+                                    <segue destination="0r9-vf-p3i" kind="embed" identifier="EMBED_MENUVC" id="d83-oa-gZG"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -184,6 +184,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gu8-Ik-6YD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="766" y="517"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="hco-1t-6yK">
+            <objects>
+                <viewController storyboardIdentifier="PROFILE_VC" id="y7y-Nc-I6U" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XmB-6l-qTO"/>
+                        <viewControllerLayoutGuide type="bottom" id="4z1-pa-f25"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rP6-cO-CEp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.65589021380000001" green="1" blue="0.98591694080000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hT-jB-x4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1445" y="517"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qJb-u7-MrS">
