@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC92C1901A953FEE00B5E611 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92C18F1A953FEE00B5E611 /* ProfileViewController.m */; };
+		EC92C1901A953FEE00B5E611 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92C18F1A953FEE00B5E611 /* ProfileViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EC94053F1A928CB600A20C55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC94053E1A928CB600A20C55 /* main.m */; };
 		EC9405421A928CB600A20C55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405411A928CB600A20C55 /* AppDelegate.m */; };
 		EC9405451A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC9405431A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld */; };

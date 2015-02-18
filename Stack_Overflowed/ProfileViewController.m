@@ -8,7 +8,8 @@
 
 #import "ProfileViewController.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <UIScrollViewDelegate>
+@property (retain, nonatomic) UIScrollView *scrollView;
 
 @end
 
@@ -16,7 +17,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+  self.scrollView.contentSize = CGSizeMake(1999, 1999);
+  [self.view addSubview:self.scrollView];
+  
+  UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 1000, 100, 50)];
+  textField.backgroundColor = [UIColor purpleColor];
+  [self.scrollView addSubview:textField];
+  [textField release];
+  self.scrollView.delegate = self;
     // Do any additional setup after loading the view.
+}
+
+-(void)dealloc {
+  [self.scrollView release];
+  [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning {

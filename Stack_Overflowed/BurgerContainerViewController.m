@@ -174,6 +174,8 @@
         destinationVC = self.searchVC;
         break;
       case 1:
+        NSLog(@"Questions");
+      case 2:
         destinationVC = self.profileVC;
       default:
         break;
@@ -181,7 +183,7 @@
     [self switchToViewController:destinationVC];
   }
 }
-//
+
 //#pragma mark - Property Getters
 //-(UINavigationController *)searchVC {
 //  if (!_searchVC) {
