@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC92C1901A953FEE00B5E611 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92C18F1A953FEE00B5E611 /* ProfileViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EC92C1931A955DE300B5E611 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EC92C1921A955DE300B5E611 /* User.m */; };
 		EC94053F1A928CB600A20C55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC94053E1A928CB600A20C55 /* main.m */; };
 		EC9405421A928CB600A20C55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9405411A928CB600A20C55 /* AppDelegate.m */; };
 		EC9405451A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC9405431A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld */; };
@@ -39,6 +40,8 @@
 		EC92C18D1A953A6C00B5E611 /* MenuPressedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPressedDelegate.h; sourceTree = "<group>"; };
 		EC92C18E1A953FEE00B5E611 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		EC92C18F1A953FEE00B5E611 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		EC92C1911A955DE300B5E611 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		EC92C1921A955DE300B5E611 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		EC9405391A928CB600A20C55 /* Stack_Overflowed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stack_Overflowed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC94053D1A928CB600A20C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC94053E1A928CB600A20C55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				EC9405491A928CB600A20C55 /* Main.storyboard */,
 				EC94057A1A940AA000A20C55 /* QuestionCell.h */,
 				EC94057B1A940AA000A20C55 /* QuestionCell.m */,
+				EC92C1911A955DE300B5E611 /* User.h */,
+				EC92C1921A955DE300B5E611 /* User.m */,
 				EC9405771A9400E100A20C55 /* Question.h */,
 				EC9405781A9400E100A20C55 /* Question.m */,
 				EC92C18D1A953A6C00B5E611 /* MenuPressedDelegate.h */,
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC92C1931A955DE300B5E611 /* User.m in Sources */,
 				EC9405701A92ABA000A20C55 /* WebOAuthViewController.m in Sources */,
 				EC9405451A928CB600A20C55 /* Stack_Overflowed.xcdatamodeld in Sources */,
 				EC94056A1A92951600A20C55 /* BurgerContainerViewController.m in Sources */,

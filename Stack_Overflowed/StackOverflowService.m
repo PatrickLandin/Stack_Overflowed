@@ -8,6 +8,7 @@
 
 #import "StackOverflowService.h"
 #import "Question.h"
+#import "User.h"
 
 @implementation StackOverflowService
 
@@ -43,7 +44,6 @@
     } else {
       NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
       NSInteger statusCode = httpResponse.statusCode;
-      
       switch (statusCode) {
         case 200 ... 299: {
           NSLog(@"%ld",(long)statusCode);
@@ -62,7 +62,6 @@
           NSLog(@"%ld",(long)statusCode);
           break;
       }
-      
     }
   }];
   [dataTask resume];
@@ -81,5 +80,41 @@
     });
   });
 }
+
+-(void)fetchUser:(void (^)(NSArray *results, NSString *error)) completionHandler {
+
+  NSString *urlString = @"https://api.stackexchange.com/2.2/me?order=desc&sort=reputation&site=stackoverflow";
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  NSString *token = [userDefaults objectForKey:@"token"];
+  if (token) {
+    urlString = [urlString stringByAppendingString:@"&access_token="];
+    urlString = [urlString stringByAppendingString:token];
+    urlString = [urlString stringByAppendingString:@"&key=eByCR*OYinRmcBCqW2XeqQ(("];
+  }
+  NSURL *url = [NSURL URLWithString:urlString];
+  NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:url];
+  urlRequest.HTTPMethod = @"GET";
+  
+  NSURLSession *session = [NSURLSession sharedSession];
+  NSURLSessionTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    if (error) {
+      completionHandler(nil, @"couldn't connect");
+    } else {
+      NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+      NSInteger statusCode = httpResponse.statusCode;
+      switch (statusCode) {
+        case 200 ... 299: {
+          NSLog(@"%ld",(long)statusCode);
+          break;
+        }
+        default:
+          NSLog(@"Crap! Status code %ld",(long)statusCode);
+          break;
+      }
+    }
+  }];
+  [dataTask resume];
+}
+
 
 @end

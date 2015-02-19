@@ -163,7 +163,7 @@
 }
 
 -(void)menuOptionSelected:(NSInteger)selectedRow {
-  
+  NSLog(@"%ld",(long)selectedRow);
   if (self.selectedRow == selectedRow) {
     [self closePanel];
   } else {
@@ -174,15 +174,19 @@
         destinationVC = self.searchVC;
         break;
       case 1:
-        NSLog(@"Questions");
-      case 2:
         destinationVC = self.profileVC;
+        break;
+      case 2:
+        break;
       default:
         break;
     }
     [self switchToViewController:destinationVC];
   }
 }
+
+
+// Example of a lazy property:
 
 //#pragma mark - Property Getters
 //-(UINavigationController *)searchVC {

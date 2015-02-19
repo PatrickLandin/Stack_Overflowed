@@ -7,9 +7,16 @@
 //
 
 #import "ProfileViewController.h"
+#import "StackOverflowService.h"
+#import "User.h"
 
 @interface ProfileViewController () <UIScrollViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UILabel *displayNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *userLocationLabel;
 @property (retain, nonatomic) UIScrollView *scrollView;
+@property (strong, nonatomic) NSArray *userInfo;
+@property (strong, nonatomic) User* theUser;
 
 @end
 
@@ -17,6 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  NSLog(@"View did loaded!");
+  
   self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
   self.scrollView.contentSize = CGSizeMake(1999, 1999);
   [self.view addSubview:self.scrollView];
@@ -26,7 +36,15 @@
   [self.scrollView addSubview:textField];
   [textField release];
   self.scrollView.delegate = self;
-    // Do any additional setup after loading the view.
+ 
+ [[StackOverflowService sharedService] fetchUser:^(NSArray *results, NSString *error) {
+   self.userInfo = results;
+   self.theUser = self.userInfo.lastObject;
+   self.displayNameLabel.text = self.theUser.displayName;
+   self.userLocationLabel.text = self.theUser.location;
+ }];
+  
+  // Do any additional setup after loading the view.
 }
 
 -(void)dealloc {

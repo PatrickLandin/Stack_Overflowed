@@ -1,16 +1,16 @@
 //
-//  Question.m
+//  User.m
 //  Stack_Overflowed
 //
-//  Created by Patrick Landin on 2/17/15.
+//  Created by Patrick Landin on 2/18/15.
 //  Copyright (c) 2015 pLandin. All rights reserved.
 //
 
-#import "Question.h"
+#import "User.h"
 
-@implementation Question
+@implementation User
 
-+(NSArray *)questionsFromJSON:(NSData *)jsonData {
++(NSArray *)userInfoFromJSON:(NSData *)jsonData {
   
   NSError *error;
   NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
@@ -22,12 +22,11 @@
   NSMutableArray *temp = [[NSMutableArray alloc] init];
   
   for (NSDictionary *item in items) {
-    Question *question = [[Question alloc] init];
-    question.title = item[@"title"];
-    NSDictionary *userInfo = item[@"owner"];
-    question.avatarURL = userInfo[@"profile_image"];
+    User *user = [[User alloc] init];
+    user.location = item[@"location"];
+    user.displayName = item[@"display_name"];
     
-    [temp addObject:question];
+    [temp addObject:user];
   }
   NSArray *final = [[NSArray alloc] initWithArray:temp];
   return final;
