@@ -105,12 +105,22 @@
       switch (statusCode) {
         case 200 ... 299: {
           NSLog(@"%ld",(long)statusCode);
+          NSArray *results = [User userFromJSON:data];
+          
+          dispatch_async(dispatch_get_main_queue(), ^{
+            if (results) {
+              completionHandler(results,nil);
+            } else {
+              completionHandler(nil,@"Search sucked");
+            }
+          });
           break;
         }
         default:
           NSLog(@"Crap! Status code %ld",(long)statusCode);
           break;
       }
+      NSLog(@"%@",data);
     }
   }];
   [dataTask resume];

@@ -12,11 +12,11 @@
 
 @interface ProfileViewController () <UIScrollViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UILabel *displayNameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *userLocationLabel;
+@property (assign, nonatomic) IBOutlet UILabel *displayNameLabel;
+@property (assign, nonatomic) IBOutlet UILabel *userLocationLabel;
 @property (retain, nonatomic) UIScrollView *scrollView;
-@property (strong, nonatomic) NSArray *userInfo;
-@property (strong, nonatomic) User* theUser;
+@property (retain, nonatomic) NSArray *userInfo;
+@property (retain, nonatomic) User* theUser;
 
 @end
 
@@ -49,6 +49,8 @@
 
 -(void)dealloc {
   [self.scrollView release];
+  [self.userInfo release];
+  [self.theUser release];
   [super dealloc];
 }
 

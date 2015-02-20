@@ -10,7 +10,7 @@
 
 @implementation User
 
-+(NSArray *)userInfoFromJSON:(NSData *)jsonData {
++(NSArray *)userFromJSON:(NSData *)jsonData {
   
   NSError *error;
   NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];

@@ -10,6 +10,8 @@
 
 @interface User : NSObject
 
++(NSArray *)userFromJSON:(NSData *)jsonData;
+
 @property (strong,nonatomic) NSString *location;
 @property (strong,nonatomic) NSString *displayName;
 
